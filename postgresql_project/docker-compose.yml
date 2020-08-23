@@ -1,0 +1,13 @@
+
+version: '3.7'
+services:
+  web:
+   build: .
+   command: python3 /djangoForProffesionals/manage.py runserver 0.0.0.0:8000
+   volumes:
+    - .:/djangoForProffesionals 
+   ports:
+    - 8000:8000
+  db:
+    image: postgres:11
+  
